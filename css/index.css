@@ -1,17 +1,17 @@
 @charset "utf-8";
 
-.portfolio .container .pofol_swipe .slide>li {
-  cursor: url('/img/go.png'), auto;
-  cursor: -webkit-image-set(url('/img/go.png'), auto);
+.portfolio .pofol_swipe .slide * {
+  cursor: url(../img/go.png), auto;
+  cursor: -webkit-image-set(url(../img/go.png), auto);
 }
 
 body {
   color: #fff;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  font-family: 'Noto Sans KR', sans-serif;
   font-size: 15px;
+  font-family: 'Noto Sans KR', sans-serif;
+  overflow: hidden;
 }
 
 /* intro */
@@ -301,13 +301,14 @@ section h3 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   transition: all .3s;
 }
 
 .side_menu {
+  min-width: 360px;
   padding: 70px 7%;
   box-sizing: border-box;
 }
@@ -321,7 +322,6 @@ section h3 {
 }
 
 /* section1 menu */
-
 @keyframes blackBackgroundFadeIn {
   0% {
     width: 0;
@@ -692,6 +692,7 @@ section h3 {
 /* section3 portfolio */
 .portfolio {
   background: #222;
+  overflow-y: auto;
 }
 
 .portfolio .pofol_swipe {
@@ -1074,6 +1075,10 @@ section h3 {
   }
 
   /* 포트폴리오 */
+  .portfolio .pofol_swipe {
+    padding-bottom: 50px;
+  }
+
   .op_box {
     padding-top: 100px;
     opacity: 1;
@@ -1160,7 +1165,7 @@ section h3 {
   }
 
   .about_menu .title {
-    margin: 10px 0;
+    margin: 20px 0 10px;
     padding: 10px 0;
     font-size: 18px;
   }
@@ -1223,6 +1228,11 @@ section h3 {
 
   .gnb .con_menu div:hover p {
     left: 50%;
+  }
+
+  .portfolio .pofol_swipe {
+    margin-top: 20px;
+    padding-bottom: 0;
   }
 
   .portfolio .box .dummy2 {
@@ -1294,4 +1304,24 @@ section h3 {
     height: 20px;
     background: #222;
   }
+}
+
+/* no animation */
+.no-animation .intro {
+  display: none !important;
+}
+
+.no-animation .main-manu .container {
+  animation: none !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  padding: 70px 7% 100px !important;
+  background: #222 !important;
+}
+
+.no-animation .gnb>li {
+  animation: none !important;
+  opacity: 1 !important;
+  height: 100% !important;
 }
